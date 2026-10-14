@@ -30,7 +30,7 @@ th,td{border:1px solid var(--bd);padding:6px 8px;vertical-align:top;font-size:13
 <h2>3. Osoblje i zaduženja</h2><div class="w"><table id="t1"></table></div>
 <h2>4. Raspored po zaronima</h2><div class="lg" id="lg"></div><div id="t2"></div>
 <h2>5. Raspored po roniocima i kandidatima</h2><div class="w"><table id="t3"></table></div>
-<p>Kandidati za Dive Master (Vlado, Rejhan, Hrvoje, Davor Rotim) imaju samo preostalu teoriju, bez zarona.</p>
+<p>Kandidati za Dive Master imaju samo preostalu teoriju, bez zarona u okviru kursa. Teoriju imaju u terminima koji se ne poklapaju sa zaronima, pa roni fun dive: Vlado i Rejhan u grupi Fun A (Emma), Hrvoje i Davor Rotim u grupi Fun B (Ajdin).</p>
 <h2>6. Check lista ronilačke opreme (SSI)</h2><p>Svi zaroni se rade isključivo sa bocama napunjenim zrakom.</p><div class="ck" id="ck"></div>
 <script>
 const S=[["z1","Petak 16.10.","16:00"],["z2","Petak 16.10.","20:00 (noćni)"],["z3","Subota 17.10.","10:00"],["z4","Subota 17.10.","14:00"],["z5","Subota 17.10.","20:00 (noćni)"],["z6","Nedjelja 18.10.","10:00"]];
@@ -44,7 +44,7 @@ P(3,"NAV","Elmedina Maljević Suljić",["Benjamin Kolić","Ivica Glavor","Petra"
 P(3,"DECO","Senad Šišić",["Davor Fuks"],"Decompression zaron 1");P(4,"DECO","Senad Šišić",["Davor Fuks"],"Decompression zaron 2");P(6,"DECO","Senad Šišić",["Davor Fuks"],"Decompression zaron 3");
 P(2,"DS","Senad Šišić",["Davor Fuks"],"Dry Suit zaron 1");P(5,"DS","Senad Šišić",["Davor Fuks"],"Dry Suit zaron 2");
 P(4,"DPV","Nermin Skula",["Amel Galijatović"],"DPV zaron 1");P(6,"DPV","Nermin Skula",["Amel Galijatović"],"DPV zaron 2");
-const FA=["Atif Đinalić","Amela Đinalić","Adnan Đinalić","Mustafa Besić","Muhamed Ramić","Lesia Koiashevych"],FB=["Nermina Kladnicanin","Amra Zubčević","Džemo Zubčević","Dijana Juković","Adis Ćurić","Dženita Ćurić"];
+const FA=["Atif Đinalić","Amela Đinalić","Adnan Đinalić","Mustafa Besić","Muhamed Ramić","Lesia Koiashevych","Vlado","Rejhan"],FB=["Nermina Kladnicanin","Amra Zubčević","Džemo Zubčević","Dijana Juković","Adis Ćurić","Dženita Ćurić","Hrvoje","Davor Rotim"];
 [1,3,4,6].forEach(s=>{P(s,"FUN","Emma Kladnicanin",FA,"Fun A");P(s,"FUN","Ajdin Đinalić",FB,"Fun B")});
 [2,5].forEach(s=>{P(s,"NIGHT","Ajdin Đinalić",["Ivica Glavor","Benjamin Kolić","Benjamin Muratović","Nidal"],"Noćna grupa 1");P(s,"NIGHT","Emma Kladnicanin",["Amel Galijatović","Amel Tahirović","Ishak Tahirović","Ismar"],"Noćna grupa 2")});
 const $=i=>document.getElementById(i);
