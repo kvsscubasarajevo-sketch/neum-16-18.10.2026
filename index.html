@@ -15,23 +15,51 @@ th,td{border:1px solid var(--bd);padding:6px 8px;vertical-align:top;font-size:13
 .k{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:8px 0}.k div{border-radius:10px;padding:8px 10px;background:var(--OWD)}.k b{display:block;font-size:12px;color:var(--mut)}.k div:nth-child(2){background:var(--NAV)}.k div:nth-child(3){background:var(--DEEP)}.k div:nth-child(4){background:var(--NIGHT)}
 .ck{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}.ck section{border-radius:10px;padding:8px 12px}.ck h3{margin:0 0 4px}.ck ul{list-style:none;margin:0;padding:0}.ck li{padding:1px 0}.ck li:before{content:"\2610  "}
 @media print{body{padding:0}.ck section,tr{break-inside:avoid}}
+
+html{font-size:clamp(14px,.35vw + 12px,18px)}
+body{max-width:none;margin:0;padding:0 clamp(12px,2.2vw,40px) 40px;font-size:1rem;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+th,td{font-size:.92em}
+.hero{margin:clamp(8px,1.5vw,20px) 0 0;padding:clamp(16px,2.5vw,36px);border-radius:16px;background:linear-gradient(120deg,var(--OWD),var(--NAV) 45%,var(--NIGHT))}
+.hero h1{font-size:clamp(20px,2.6vw,38px);line-height:1.15;margin:0 0 6px;color:var(--fg)}.hero p{color:var(--fg);opacity:.8;margin:2px 0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:6px;overflow-x:auto;padding:8px 0;background:var(--bg);-webkit-overflow-scrolling:touch}
+nav a{flex:0 0 auto;padding:6px 14px;border-radius:999px;background:var(--hd);color:var(--fg);text-decoration:none;font-size:.9em;border:1px solid var(--bd)}
+nav a:hover{background:var(--OWD)}
+h2{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 56px);font-size:clamp(17px,1.6vw,24px)}
+#t2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:14px}
+.card{border:1px solid var(--bd);border-radius:14px;padding:6px 12px 10px;min-width:0}.card h3{margin:8px 0 6px}.card .w{margin:0}
+.k{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}.k div{font-size:1.05em}
+#t3{min-width:1150px}#t3 td.n{position:sticky;left:0;z-index:1}#t3 td{min-width:120px}
+.hint{display:none}
+.lg span{font-size:.85em}
+@media (max-width:720px){
+table.st{min-width:0}table.st tr:first-child{display:none}
+table.st,table.st tbody,table.st tr,table.st td{display:block;width:100%}
+table.st tr{border:1px solid var(--bd);border-radius:10px;margin:8px 0;overflow:hidden}
+table.st td{border:0;border-bottom:1px solid var(--bd);padding:6px 10px;white-space:normal}
+table.st td:last-child{border-bottom:0}
+table.st td[data-label]::before{content:attr(data-label);display:block;font-size:.72em;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.w:has(table.st){border:0}
+.hint{display:block;margin:2px 0}
+}
+@media print{nav,body::before{display:none}body{padding:0}.hero{background:none;border:1px solid var(--bd)}}
 </style></head><body>
-<h1>KVS SCUBA Neum 16.-18.10.2026. - Organizacija ronilačkog vikenda</h1>
-<p>Organizator: KVS SCUBA, Neum. Odgovoran za raspored: Davor Mulalić, SSI Pro.</p>
-<h2>1. Uslovi u Neumu</h2>
+<header class="hero"><h1>KVS SCUBA Neum 16.-18.10.2026. - Organizacija ronilačkog vikenda</h1><p>Organizator: KVS SCUBA, Neum. Odgovoran za raspored: Davor Mulalić, SSI Pro.</p></header>
+<nav><a href="#s1">Uslovi</a><a href="#s2">Termini</a><a href="#s3">Osoblje</a><a href="#s4">Zaroni</a><a href="#s5">Po roniocima</a><a href="#s6">Po roniocu</a></nav>
+<h2 id="s1">1. Uslovi u Neumu</h2>
 <div class="k"><div><b>Vidljivost</b>do 4 m (loša)</div><div><b>Temperatura mora na površini</b>21 °C</div><div><b>Najdublja tačka u Neumu</b>22 m</div><div><b>Plin u bocama</b>samo zrak</div></div>
 <div class="w"><table><tr><th>Dan</th><th>Temperatura (min / max)</th><th>Vjetar</th><th>Udari vjetra</th></tr>
 <tr><td class="n OWD">Petak 16.10.</td><td>12° / 21°</td><td>5 m/s</td><td>12 m/s</td></tr>
 <tr><td class="n NAV">Subota 17.10.</td><td>10° / 19°</td><td>3 m/s</td><td>9 m/s</td></tr>
 <tr><td class="n DEEP">Nedjelja 18.10.</td><td>11° / 20°</td><td>2 m/s</td><td>6 m/s</td></tr></table></div>
-<h2>2. Termini zarona, brifing i debrifing</h2>
-<div class="w"><table id="t0"></table></div>
+<h2 id="s2">2. Termini zarona, brifing i debrifing</h2>
+<div class="w"><table id="t0" class="st"></table></div>
 <p>Na raspolaganju je 33 boce, a ronilaca je 37, pa su kursevi i fun dive razdvojeni u zasebne termine i broj ronilaca u vodi ne prelazi broj boca.</p><p>Brifing prije svakog zarona obavlja svaki instruktor i Dive Master sa svojom grupom. Debrifing je u petak i subotu u 20:00 na terasi apartmana Glavinić.</p>
-<h2>3. Osoblje i zaduženja</h2><div class="w"><table id="t1"></table></div>
-<h2>4. Raspored po zaronima</h2><div class="lg" id="lg"></div><div id="t2"></div>
-<h2>5. Raspored po roniocima i kandidatima</h2><div class="w"><table id="t3"></table></div>
+<h2 id="s3">3. Osoblje i zaduženja</h2><div class="w"><table id="t1" class="st"></table></div>
+<h2 id="s4">4. Raspored po zaronima</h2><div class="lg" id="lg"></div><div id="t2"></div>
+<h2 id="s5">5. Raspored po roniocima i kandidatima</h2><p class="hint">Tabelu pomjerajte lijevo-desno.</p><div class="w"><table id="t3"></table></div>
 <p>Kandidati za Dive Master imaju samo preostalu teoriju. Brifing i fun dive (z4, z6 i z9) obavljaju sa instruktorom Midhatom Kozadrom, a noćne zarone za specijalnost vode u parovima, uz ocjenjivanje i nadzor instruktora.</p>
-<h2>6. Po roniocu</h2><div class="w"><table id="t4"></table></div>
+<h2 id="s6">6. Po roniocu</h2><div class="w"><table id="t4" class="st"></table></div>
 <script>
 const S=[["z1","Petak 16.10.","16:00","K"],["z2","Petak 16.10.","20:00","N"],["z3","Subota 17.10.","09:00","K"],["z4","Subota 17.10.","11:00","F"],["z5","Subota 17.10.","14:00","K"],["z6","Subota 17.10.","15:30","F"],["z7","Subota 17.10.","20:00","N"],["z8","Nedjelja 18.10.","09:00","K"],["z9","Nedjelja 18.10.","11:00","F"]];
 const TY={K:["Kursevi","OWD"],F:["Fun dive","FUN"],N:["Noćni zaroni","NIGHT"]};
@@ -66,7 +94,7 @@ $("t1").innerHTML="<tr><th>Osoba</th><th>Funkcija</th><th>Zaduženje</th></tr>"+
 const cnt=s=>{const n=new Set();E.filter(e=>e.s==s).forEach(e=>{e.m.concat(e.x).forEach(v=>n.add(v));e.l.split(/; ocjenjuje i nadgleda: | i /).forEach(v=>n.add(v))});return n.size};
 let h="";S.forEach((x,i)=>{const s=i+1;let rows=E.filter(e=>e.s==s).map(e=>`<tr><td class="${e.k}"><b>${e.n}</b></td><td>${e.l}</td><td>${e.m.join(", ")}</td></tr>`).join("");
 if(x[3]=="N"&&s==2||s==7)rows+=`<tr><td class="NIGHT"><b>Nadzor noćnih zarona</b></td><td>Nermin Skula</td><td>Sve noćne grupe</td></tr>`;
-h+=`<h3>${x[0]} - ${x[1]} u ${x[2]} (${TY[x[3]][0]}) <span class="m">Boce u upotrebi: ${cnt(s)} od 33</span></h3><div class="w"><table><tr><th>Program</th><th>Vodi</th><th>Učesnici</th></tr>${rows}</table></div>`});$("t2").innerHTML=h;
+h+=`<section class="card"><h3>${x[0]} - ${x[1]} u ${x[2]} (${TY[x[3]][0]}) <span class="m">Boce u upotrebi: ${cnt(s)} od 33</span></h3><div class="w"><table class="st"><tr><th>Program</th><th>Vodi</th><th>Učesnici</th></tr>${rows}</table></div></section>`});$("t2").innerHTML=h;
 const all=["Vladimir Grubor|Vladimir Grubor","Rejhan Sokić|Rejhan Sokić","Davor Fuks|Davor Fuks","Hrvoje Marić|Hrvoje Marić","Davor Rotim|Davor Rotim","Ivica Glavor|Ivica Glavor","Petra Kisić|Petra","Grgur Guljelmović|Grgur","Nidal El Barekah|Nidal","Ismar Salimović|Ismar","Amel Tahirović|Amel Tahirović","Ishak Tahirović|Ishak Tahirović","Benjamin Kolić|Benjamin Kolić","Benjamin Muratović|Benjamin Muratović","Emina Murtić|Emina","Amel Galijatović|Amel Galijatović","Emma Kladničanin|","Nermina Kladničanin A.|Nermina Kladničanin","Amra Zubčević|Amra Zubčević","Džemo Zubčević|Džemo Zubčević","Dijana Juković|Dijana Juković","Adis Ćurić|Adis Ćurić","Dženita Ćurić|Dženita Ćurić","Atif Đinalić|","Ajdin Đinalić|","Amela Đinalić|Amela Đinalić","Adnan Đinalić|Adnan Đinalić","Muhamed Ramić|Muhamed Ramić","Lesia Koiashevych|Lesia Koiashevych"];
 h=hd.replace("<th></th>","<th>Ronilac</th>");all.forEach(a=>{const[f,k]=a.split("|");const lead=f.startsWith("Emma")?"Emma Kladničanin":f.startsWith("Ajdin")?"Ajdin Đinalić":f.startsWith("Atif")?"Atif Đinalić":null;
 h+=`<tr><td class="n">${f}</td>`;for(let s=1;s<=9;s++){const ev=lead?E.filter(e=>e.s==s&&e.l==lead):E.filter(e=>e.s==s&&(e.m.includes(k)||e.x.includes(k)));
@@ -74,4 +102,5 @@ const c=ev.map(e=>`<span class="c ${e.k}">${lead?"Vodi: ":(e.x.includes(k)?"Vodi
 h+=`<td>${c||'<span class="m">-</span>'}</td>`}h+="</tr>"});$("t3").innerHTML=h;
 const PR={"Vladimir Grubor": "Dive Master (teorija), vodi noćne zarone u paru, fun dive", "Rejhan Sokić": "Dive Master (teorija), vodi noćne zarone u paru, fun dive", "Davor Fuks": "Dive Master (teorija), Decompression, Dry Suit", "Hrvoje Marić": "Dive Master (teorija), vodi noćne zarone u paru, fun dive", "Davor Rotim": "Dive Master (teorija), vodi noćne zarone u paru, fun dive", "Ivica Glavor": "Deep, Navigacija, noćno ronjenje", "Petra Kisić": "Deep, Navigacija", "Grgur Guljelmović": "Open Water Diver (OWD)", "Nidal El Barekah": "Deep, noćno ronjenje", "Ismar Salimović": "Deep, noćno ronjenje", "Amel Tahirović": "Deep, noćno ronjenje", "Ishak Tahirović": "Deep, noćno ronjenje", "Benjamin Kolić": "Navigacija, noćno ronjenje", "Benjamin Muratović": "Noćno ronjenje", "Emina Murtić": "Open Water Diver (OWD)", "Amel Galijatović": "DPV, noćno ronjenje", "Emma Kladničanin": "Dive Master, vodi fun dive (Fun A) i noćni fun dive", "Nermina Kladničanin A.": "Fun dive (Fun B), noćni fun dive", "Amra Zubčević": "Fun dive (Fun B), noćni fun dive", "Džemo Zubčević": "Fun dive (Fun B), noćni fun dive", "Dijana Juković": "Fun dive (Fun B), noćni fun dive, noćni fun dive", "Adis Ćurić": "Fun dive (Fun C), noćni fun dive", "Dženita Ćurić": "Fun dive (Fun C), noćni fun dive", "Atif Đinalić": "Vodi fun dive (Fun C)", "Ajdin Đinalić": "Dive Master, vodi fun dive (Fun B) i noćni fun dive", "Amela Đinalić": "Fun dive (Fun A), noćni fun dive", "Adnan Đinalić": "Fun dive (Fun A), noćni fun dive", "Muhamed Ramić": "Fun dive (Fun A), noćni fun dive", "Lesia Koiashevych": "Fun dive (Fun C), noćni fun dive"};
 $("t4").innerHTML="<tr><th>Ronilac</th><th>Program</th></tr>"+all.map(a=>{const f=a.split("|")[0];return `<tr><td class="n">${f}</td><td>${PR[f]}</td></tr>`}).join("");
+document.querySelectorAll("table.st").forEach(t=>{const hs=[...t.rows[0].cells].map(c=>c.textContent.trim());[...t.rows].slice(1).forEach(r=>[...r.cells].forEach((c,i)=>{if(hs[i])c.setAttribute("data-label",hs[i])}))});
 </script></body></html>
